@@ -8,7 +8,7 @@ const Center = () => {
 
 
     return (
-        <div className='col-span-6 bg-black/90 overflow-x-hidden overflow-y-auto h-[90vh]'>
+        <div className='col-span-6 bg-black/90 overflow-x-hidden overflow-y-auto h-[91vh]'>
             <div className=' overflow-x-auto flex p-2 max-w-full '>
                 <StoryCard />
                 <StoryCard />

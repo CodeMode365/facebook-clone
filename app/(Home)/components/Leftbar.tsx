@@ -8,11 +8,6 @@ const Leftbar = () => {
 
     const actions = [
         {
-            name: "Friends",
-            href: "/friends",
-            icon: FaUserFriends
-        },
-        {
             name: "Home",
             href: "/",
             icon: AiFillHome
@@ -67,12 +62,18 @@ const Leftbar = () => {
             href: "/gaming",
             icon: FaGamepad
         },
+        {
+            name: "Friends",
+            href: "/friends",
+            icon: FaUserFriends
+        },
+       
     ]
 
     return (
-        <div className='col-span-3 bg-black/90 h-[90vh] overflow-y-auto overflow-x-hidden'>
+        <div className='col-span-3 bg-black/90 h-[91vh] overflow-y-auto overflow-x-hidden py-4'>
             {actions.map((action) => (
-                <div className='w-full my-1 mx-4 text-white/80 flex items-center cursor-pointer px- text-white text-md hover:bg-white/10 rounded-lg py-4 px-3'>
+                <div className='w-full my-1 mx-4 text-white/80 flex items-center cursor-pointer px- text-white text-md hover:bg-white/10 rounded-lg py-4 px-3 hover:text-blue-500'>
                     <span>
                         <action.icon size={30} />
                     </span>
