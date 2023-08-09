@@ -57,7 +57,7 @@ const MessageModal: React.FC<iProps> = ({ onClose }) => {
                 </div>
             </div>
             <div className='absolute border-t border-white/30 bottom-0 text-blue-500 flex flex-col items-center w-full'>
-                <h4 className='my-1 text-lg'>See all in Messenger</h4>
+                <h4 className='my-2 text-lg hover:underline cursor-pointer'>See all in Messenger</h4>
             </div>
 
         </div>

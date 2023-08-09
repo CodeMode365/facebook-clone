@@ -2,8 +2,6 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Navbar from './components/Navbar'
-import Rightbar from './(Home)/components/Rightbar'
-import Leftbar from './(Home)/components/Leftbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} overflow-hidden`}>
         <Navbar />
-          {children}
+        {children}
       </body>
     </html>
   )

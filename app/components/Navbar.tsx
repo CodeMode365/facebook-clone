@@ -15,6 +15,8 @@ import { usePathname } from "next/navigation"
 import { useRouter } from 'next/router'
 import clsx from 'clsx'
 import Avatar from './Avatar'
+import MessageModal from './Modals/MessageModal'
+import NotificationModal from './Modals/NotificationModal'
 
 
 const Navbar = () => {
@@ -99,23 +101,37 @@ const Navbar = () => {
             </div>
 
             <div className='flex col-span-1 justify-end' >
-                <button className={clsx(`bg-white/20 rounded-full p-4 cursro-pointer mx-1`,
-                    messageOpen && 'bg-blue-500/60 bg-opacity-75'
-                )}
-                    title="messages"
-                    onClick={toggleMessageModal}
-                >
-                    <BsMessenger size={24} className={`${messageOpen && "text-blue-500"}`} />
-                </button>
-                <button className={clsx(` bg-white/20 rounded-full p-4 cursro-pointer mx-1`,
-                    notificationOpen && 'bg-blue-500/60 bg-opacity-75'
-                )}
-                    title="notifications"
-                    onClick={toggleNotificatioModal}
+                <div className='relative'>
+                    <button className={clsx(` bg-white/20 rounded-full p-4 cursro-pointer mx-1`,
+                        messageOpen && 'bg-blue-500/60 bg-opacity-75'
+                    )}
+                        title="messages"
+                        onClick={toggleMessageModal}
+                    >
+                        <BsMessenger size={24} className={`${messageOpen && "text-blue-500"}`} />
+                    </button>
+                    {
+                        messageOpen &&
+                        <MessageModal onClose={closeModals} />
+                    }
 
-                >
-                    <IoMdNotifications size={24} className={`${notificationOpen && "text-blue-500"}`} />
-                </button>
+                </div>
+                <div className='relative'>
+
+                    <button className={clsx(` bg-white/20 rounded-full p-4 cursro-pointer mx-1`,
+                        notificationOpen && 'bg-blue-500/60 bg-opacity-75'
+                    )}
+                        title="notifications"
+                        onClick={toggleNotificatioModal}
+
+                    >
+                        <IoMdNotifications size={24} className={`${notificationOpen && "text-blue-500"}`} />
+                    </button>
+                    {
+                        notificationOpen &&
+                        <NotificationModal onClose={closeModals} />
+                    }
+                </div>
                 <Avatar />
             </div>
         </nav>
