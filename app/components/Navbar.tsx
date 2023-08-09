@@ -6,10 +6,11 @@ import Tooptip from './Tooptip'
 import { BsFacebook } from "react-icons/bs"
 import { AiFillHome } from "react-icons/ai"
 import { BsShop, BsMessenger } from "react-icons/bs"
-import { BiSolidVideos, } from "react-icons/bi"
+import { BiSearch, BiSolidVideos, } from "react-icons/bi"
 import { MdGroups2 } from "react-icons/md"
 import { FaGamepad } from "react-icons/fa"
 import { IoMdNotifications } from "react-icons/io"
+import { GiHamburgerMenu } from "react-icons/gi"
 import Link from 'next/link'
 import { usePathname } from "next/navigation"
 import { useRouter } from 'next/router'
@@ -73,23 +74,27 @@ const Navbar = () => {
     }
 
     return (
-        <nav className='border-b border-white/60 bg-black/80 h-[4.5rem] w-full dark:text-white gap-2 grid grid-cols-3 py-auto justify-between items-center px-4'>
-            <div className='flex justify-between col-span-2 items-center '>
+        <nav className='border-b border-white/60 bg-black/80 h-[4.5rem] w-screen grid grid-cols-12 dark:text-white py-auto justify-between items-center px-4'>
+         
+            <div className='flex justify-between items-center col-span-8 lg:col-span-10 '>
                 <div className='flex'>
 
                     <h1 className='text-blue-500 bg-white flex rounded-full cursor-pointer'>
                         <BsFacebook size={50} />
                     </h1>
+                    <div className='mx-2 lg:hidden bg-white/80 rounded-full flex items-center justify-center text-black/80'>
+                        <BiSearch size={32} className="block md:hidden" />
+                    </div>
 
                     <div className=' ml-2'>
-                        <Input rounded='full' placeholder='Search Facebook' required type={'text'} classes={" py-2 px-2 text-lg  text-white"} />
+                        <Input rounded='full' placeholder='Search Facebook' required type={'text'} classes={"hidden lg:block py-2 px-2 text-lg  text-white"} />
                     </div>
 
                 </div>
-                <ul className='flex justify-around items-center h-full my-auto md:ml-32'>
+                <ul className='hidden md:flex justify-around items-center h-full my-auto md-4 md:ml-10 lg:ml-16  xl:mr-15 overflow-hidden mr-20'>
                     {links.map((link) => (
-                        <li className={`flex cursor-pointer mx-2  text-gray-300 ${isActive(link.href) && "border-b-4 border-blue-500 "}`} aria-describedby={link.name}>
-                            <Link href={link.href} className={clsx(`px-8  py-3 h-full rounded-md`,
+                        <li className={`flex cursor-pointer lg:mx-2  text-gray-300 ${isActive(link.href) && "border-b-4 border-blue-500 "}`} aria-describedby={link.name}>
+                            <Link href={link.href} className={clsx(`px-4 py-2 md:px-8  md:py-3 h-full rounded-md`,
                                 isActive(link.href) ? 'text-blue-500 ' : 'hover:bg-white/20'
                             )} onClick={closeModals} aria-label={link.name} title={link.name}>
                                 <link.icon size={34} />
@@ -100,7 +105,7 @@ const Navbar = () => {
 
             </div>
 
-            <div className='flex col-span-1 justify-end' >
+            <div className='flex justify-end col-span-4 lg:col-span-2 ' >
                 <div className='relative'>
                     <button className={clsx(` bg-white/20 rounded-full p-4 cursro-pointer mx-1`,
                         messageOpen && 'bg-blue-500/60 bg-opacity-75'

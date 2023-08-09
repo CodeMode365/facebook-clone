@@ -25,7 +25,7 @@ const Rightbar = () => {
   ]
 
   return (
-    <div className='col-span-3 pl-14 bg-black/90 h-[91vh] text-white overflow-x-hidden overflow-y-auto'>
+    <div className='hidden md:block md:col-span-3 lg:col-span-3 pl-14 bg-black/90 h-[91vh] text-white overflow-x-hidden overflow-y-auto'>
       <div className='w-full flex justify-between px-4 mt-6'>
         <h3 className="font-bold">Contacts</h3>
         <div className='flex'>
