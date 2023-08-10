@@ -1,5 +1,6 @@
 import Avatar from '@/app/components/Avatar'
 import React from 'react'
+import { AiFillPlayCircle } from 'react-icons/ai'
 import { BiComment, BiLike } from 'react-icons/bi'
 import { BsThreeDots } from 'react-icons/bs'
 import { FaEarthAmericas } from 'react-icons/fa6'
@@ -43,13 +44,13 @@ const VideoCard = () => {
                 <div>
                 </div>
             </div>
-            <div className='bg-white/30 w-full h-[700px] my-4'>
-                post Image here
+            <div className='bg-white/30 w-full h-[700px] my-4 flex items-center justify-center text-blue-500 cursor-pointer '>
+                <AiFillPlayCircle size={80} className="hover:blur-[3px] shadow-lg shadow-blue-500 rounded-full " />
             </div>
             <div className='flex justify-between px-20 items-center pb-2'>
                 {
                     actions.map((action) => (
-                        <div className='text-white/80 flex items-center cursor-pointer text-md hover:bg-white/10 rounded-lg px-4 py-10'>
+                        <div key={action.name} className='text-white/80 flex items-center cursor-pointer text-md hover:bg-white/10 rounded-lg px-4 py-10'>
                             <span>
                                 <action.icon size={30} />
                             </span>

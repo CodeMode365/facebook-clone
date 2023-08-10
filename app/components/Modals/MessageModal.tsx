@@ -40,8 +40,8 @@ const MessageModal: React.FC<iProps> = ({ onClose }) => {
                 </div>
 
                 <div className='mt-6'>
-                    {users.map(user => (
-                        <div className='w-11/12 mx-auto text-white/80 flex items-center cursor-pointer  text-white text-md hover:bg-white/10 rounded-lg py-4 px-3 hover:text-blue-500'>
+                    {users.map((user, ind) => (
+                        <div key={user.name + ind} className='w-11/12 mx-auto text-white/80 flex items-center cursor-pointer  text-white text-md hover:bg-white/10 rounded-lg py-4 px-3 hover:text-blue-500'>
                             <span>
                                 <Avatar />
                             </span>

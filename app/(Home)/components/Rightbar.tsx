@@ -34,8 +34,8 @@ const Rightbar = () => {
         </div>
       </div>
       <div className='mt-6'>
-        {users.map(user => (
-          <div className='w-full mx-4 text-white/80 flex items-center cursor-pointer  text-white text-md hover:bg-white/10 rounded-lg py-2 px-3 hover:text-blue-500'>
+        {users.map((user, ind) => (
+          <div key={user.name + ind} className='w-full mx-4 text-white/80 flex items-center cursor-pointer  text-white text-md hover:bg-white/10 rounded-lg py-2 px-3 hover:text-blue-500'>
             <span>
               <Avatar />
             </span>

@@ -35,7 +35,7 @@ const CreationModal = () => {
             <div className='flex items-center justify-between px-4 mt-4'>
                 {
                     creations.map((create) => (
-                        <div className='text-white flex items-center text-md cursor-pointer hover:bg-white/10 py-3 px-4 rounded-lg'>
+                        <div key={create.name} className='text-white flex items-center text-md cursor-pointer hover:bg-white/10 py-3 px-4 rounded-lg'>
                             <create.icon size={40} className={`mr-4 ${create.color}`} />
                             {create.name}
                         </div>

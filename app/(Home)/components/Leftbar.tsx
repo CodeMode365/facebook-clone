@@ -73,7 +73,7 @@ const Leftbar = () => {
     return (
         <div className='hidden lg:block col-span-3 bg-black/90 h-[91vh] overflow-y-auto overflow-x-hidden py-4'>
             {actions.map((action) => (
-                <div className='w-full my-1 mx-4 text-white/80 flex items-center cursor-pointer px- text-white text-md hover:bg-white/10 rounded-lg py-4 px-3 hover:text-blue-500'>
+                <div key={action.name} className='w-full my-1 mx-4 text-white/80 flex items-center cursor-pointer px- text-white text-md hover:bg-white/10 rounded-lg py-4 px-3 hover:text-blue-500'>
                     <span>
                         <action.icon size={30} />
                     </span>

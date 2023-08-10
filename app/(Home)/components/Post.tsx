@@ -51,7 +51,7 @@ const Post = () => {
             <div className='flex justify-between px-20 items-center pb-2'>
                 {
                     actions.map((action) => (
-                        <div className='text-white/80 flex items-center cursor-pointer px-6 py-2 text-white text-md hover:bg-white/10 rounded-lg'>
+                        <div key={action.name} className='text-white/80 flex items-center cursor-pointer px-6 py-2 text-white text-md hover:bg-white/10 rounded-lg'>
                             <span>
                                 <action.icon size={30} />
                             </span>
