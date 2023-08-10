@@ -8,9 +8,10 @@ import Input from '../Input'
 
 interface iProps {
     onClose: () => void
+    addChat: () => void
 }
 
-const MessageModal: React.FC<iProps> = ({ onClose }) => {
+const MessageModal: React.FC<iProps> = ({ onClose, addChat }) => {
 
 
     const users = [
@@ -24,7 +25,7 @@ const MessageModal: React.FC<iProps> = ({ onClose }) => {
     ]
 
     return (
-        <div className="absolute -left-60 mt-2 min-w-[400px] h-[80vh] mb-4  rounded-lg bg-neutral-800 ">
+        <div className="absolute -left-60 mt-2 min-w-[400px] h-[80vh] mb-4  rounded-lg bg-neutral-800 z-[9999] ">
             <div className='overflow-y-auto overflow-x-hidden h-[94.5%] mb-4'>
                 <div className='text-3xl font-bold text-white/80 my-4 w-11/12 mx-auto flex justify-between'>
                     <h2>Chats</h2>
@@ -41,7 +42,7 @@ const MessageModal: React.FC<iProps> = ({ onClose }) => {
 
                 <div className='mt-6'>
                     {users.map((user, ind) => (
-                        <div key={user.name + ind} className='w-11/12 mx-auto text-white/80 flex items-center cursor-pointer  text-white text-md hover:bg-white/10 rounded-lg py-4 px-3 hover:text-blue-500'>
+                        <div onClick={addChat} key={user.name + ind} className='w-11/12 mx-auto text-white/80 flex items-center cursor-pointer  text-white text-md hover:bg-white/10 rounded-lg py-4 px-3 hover:text-blue-500'>
                             <span>
                                 <Avatar />
                             </span>

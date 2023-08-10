@@ -27,6 +27,7 @@ const Navbar = () => {
 
     const [messageOpen, setMessageOpen] = useState(false)
     const [notificationOpen, setNotificationOpen] = useState(false)
+    const [chatCount, setChatCount] = useState<number>(2)
 
     const links = [
         {
@@ -74,6 +75,17 @@ const Navbar = () => {
         setMessageOpen(false)
     }
 
+    const addChat = () => {
+        if (chatCount < 2) {
+            setChatCount(chatCount + 1)
+        }
+    }
+    const removeChat = () => {
+        if (chatCount >= 0) {
+            setChatCount(chatCount - 1)
+        }
+    }
+
     return (
         <>
             <nav className='border-b border-white/60 bg-black/80 h-[4.5rem] w-full dark:text-white py-auto justify-between items-center px-14  flex'>
@@ -119,7 +131,7 @@ const Navbar = () => {
                         </button>
                         {
                             messageOpen &&
-                            <MessageModal onClose={closeModals} />
+                            <MessageModal onClose={closeModals} addChat={addChat} />
                         }
 
                     </div>
@@ -142,7 +154,7 @@ const Navbar = () => {
                     <Avatar />
                 </div>
             </nav>
-            <ChatModal />
+            <ChatModal chatCount={chatCount} removeChat={removeChat} />
         </>
     )
 }
