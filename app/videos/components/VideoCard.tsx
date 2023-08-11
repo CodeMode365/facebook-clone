@@ -44,8 +44,8 @@ const VideoCard = () => {
                 <div>
                 </div>
             </div>
-            <div className='bg-white/30 w-full h-[700px] my-4 flex items-center justify-center text-blue-500 cursor-pointer '>
-                <AiFillPlayCircle size={80} className="hover:blur-[3px] shadow-lg shadow-blue-500 rounded-full " />
+            <div className='bg-white/30 w-full h-[700px] my-4 flex items-center justify-center text-blue-200 cursor-pointer '>
+                <AiFillPlayCircle size={80} className="hover:blur-[3px] shadow-lg shadow-blue-200 rounded-full " />
             </div>
             <div className='flex justify-between px-20 items-center pb-2'>
                 {
