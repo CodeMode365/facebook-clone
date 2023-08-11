@@ -27,7 +27,7 @@ const Navbar = () => {
 
     const [messageOpen, setMessageOpen] = useState(false)
     const [notificationOpen, setNotificationOpen] = useState(false)
-    const [chatCount, setChatCount] = useState<number>(2)
+    const [chatCount, setChatCount] = useState<number>(0)
 
     const links = [
         {
@@ -76,7 +76,7 @@ const Navbar = () => {
     }
 
     const addChat = () => {
-        if (chatCount < 2) {
+        if (chatCount <= 2) {
             setChatCount(chatCount + 1)
         }
     }
