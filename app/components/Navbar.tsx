@@ -151,7 +151,9 @@ const Navbar = () => {
                             <NotificationModal onClose={closeModals} />
                         }
                     </div>
-                    <Avatar />
+                    <Link href={"/profile"}>
+                        <Avatar />
+                    </Link>
                 </div>
             </nav>
             <ChatModal chatCount={chatCount} removeChat={removeChat} />
