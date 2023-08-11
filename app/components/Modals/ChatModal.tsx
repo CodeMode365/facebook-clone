@@ -70,7 +70,7 @@ const ChatModal: React.FC<iProps> = ({ chatCount, removeChat }) => {
     return (
         <div className=' z-[200] absolute h-[60vh] bg-transparent w-30 bottom-0 right-20  flex flex-row w-auto '>
 
-            {Array.from({ length: chatCount + 1 }).map((_, i) => (
+            {Array.from({ length: chatCount }).map((_, i) => (
                 <Modal key={i} removeChat={removeChat} />
             ))}
 
