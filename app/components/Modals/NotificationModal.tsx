@@ -22,7 +22,7 @@ const NotificationModal: React.FC<NotificationModalProps> = ({ onClose }) => {
     ]
 
     return (
-        <div className="absolute left-[-19rem] mt-2 min-w-[400px] h-[80vh] mb-4  rounded-lg bg-neutral-800  overflow-y-auto overflow-x-hidden">
+        <div className="absolute left-[-19rem] mt-2 min-w-[400px] h-[80vh] mb-4  rounded-lg bg-neutral-800  overflow-y-auto overflow-x-hidden z-[9999]">
             <div className='text-3xl font-bold text-white/80 my-4 w-11/12 mx-auto flex justify-between'>
                 <h2>Notifications</h2>
                 <div className='flex'>
