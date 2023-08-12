@@ -1,7 +1,7 @@
 import React from 'react'
 import StoryCard from './StoryCard'
-import CreationModal from './CreationModal'
-import Post from './Post'
+import CreationModal from '../../components/Modals/CreationModal'
+import Post from '../../components/Post'
 
 
 const Center = () => {

@@ -6,7 +6,7 @@ interface iProps {
 
 const Avatar: React.FC<iProps> = ({ size }) => {
     return (
-        <div className={`p-2 bg-white/30 rounded-full ${size ? `w-${size} h-${size}` : `w-14 h-14`} mx-1 cursor-pointer`}>
+        <div className={`p-2 bg-white/30 rounded-full ${size ? `w-14 h-14` : `w-14 h-14`} mx-1 cursor-pointer`}>
             {/* <Image /> */}
         </div>
     )
